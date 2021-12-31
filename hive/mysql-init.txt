@@ -1,0 +1,46 @@
+
+mysqld --init-file=${APACHE_CONF}/hive/mysql-init.txt &
+sudo service mysql restart
+
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';
+
+pass: MySql-2021
+
+update user set authentication_string=password("dengo") where user='root';
+
+metastore_db
+
+
+:$OPT_PATH/apache-hive-3.1.2-bin/scripts/metastore/upgrade/derby$ vim hive-schema-3.1.0.derby.sql
+
+
+create domain clob as text;
+
+sudo chmod 750 /var/lib/postgresql/12/main
+
+
+
+<property>
+    <name>javax.jdo.option.ConnectionURL</name>
+    <value>jdbc:postgresql://mypostgresql.testabcd1111.us-west-2.rds.amazonaws.com:5432/mypgdb</value>
+    <description>PostgreSQL JDBC driver connection URL</description>
+  </property>
+
+  <property>
+    <name>javax.jdo.option.ConnectionDriverName</name>
+    <value>org.postgresql.Driver</value>
+    <description>PostgreSQL metastore driver class name</description>
+  </property>
+
+  <property>
+    <name>javax.jdo.option.ConnectionUserName</name>
+    <value>database_username</value>
+    <description>the username for the DB instance</description>
+  </property>
+
+  <property>
+    <name>javax.jdo.option.ConnectionPassword</name>
+    <value>database_password</value>
+    <description>the password for the DB instance</description>
+  </property>
