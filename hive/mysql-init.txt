@@ -7,7 +7,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';
 
 pass: MySql-2021
 
-update user set authentication_string=password("dengo") where user='root';
+update user set authentication_string=password('marcos') where user='root';
 
 metastore_db
 

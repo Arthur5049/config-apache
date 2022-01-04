@@ -594,7 +594,7 @@
     <!-- <value>jdbc:derby:$OPT_PATH/projects/_roo/metastore_db;create=true</value> -->
     <!-- <value>jdbc:derby:;databaseName=metastore_db;create=true</value> -->
     <!-- <value>jdbc:mysql://localhost/metastore_db?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false</value> -->
-    <value>jdbc:mysql://localhost:3306/metastore?createDatabaseIfNotExist=true&amp;autoReconnect=true&amp;useSSL=false</value>
+    <value>jdbc:mysql://localhost:3306/metastore?allowPublicKeyRetrieval=true&amp;createDatabaseIfNotExist=true&amp;autoReconnect=true&amp;useSSL=false</value>
     <!-- <value>jdbc:postgresql://localhost:5432/metastore_db?ssl=false</value> -->
     <description>
       JDBC connect string for a JDBC metastore.

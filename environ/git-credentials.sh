@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-INPUT_EMAIL=${INPUT_EMAIL:-'github-action@users.junqueira.github.com'}
+INPUT_EMAIL=${INPUT_EMAIL:-'github-action@users..github.com'}
 INPUT_NAME=${INPUT_NAME:-'GitHub Action'}
 INPUT_ACTOR=${INPUT_ACTOR:-${GITHUB_ACTOR}}
 INPUT_TOKEN=${INPUT_TOKEN:-"${{ secrets.GITHUB_TOKEN }}"}

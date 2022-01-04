@@ -31,25 +31,25 @@
 
     sudo chown -R luiz /var/hadoop/tmp/dfs/data
     hadoop datanode
+    ln -s ${APACHE_CONF}/spark/etc/spark-defaults.conf $SPARK_HOME/conf/spark-defaults.conf -f
+    ln -s ${APACHE_CONF}/hive/etc/hive-site.xml $SPARK_HOME/conf/hive-site.xml -f
 
 
 ### spark-link-conf
     export APACHE_CONF=${PROJECTS_ROOT}/apache-config
-    ln -s ${APACHE_CONF}/spark/etc/spark-defaults.conf $SPARK_HOME/conf/spark-defaults.conf -f
-    ln -s ${APACHE_CONF}/hive/etc/hive-site.xml $SPARK_HOME/conf/hive-site.xml -f
 
 ### hadoop-link-conf
     export HADOOP_HOME=$OPT_PATH/hadoop-3.3.1
-    ln -s ${APACHE_CONF}/hadoop/etc/hadoop-env.sh $HADOOP_HOME/etc/hadoop/hadoop-env.sh -f
-    ln -s ${APACHE_CONF}/hadoop/etc/core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml -f
-    ln -s ${APACHE_CONF}/hadoop/etc/hdfs-site.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml -f
-    ln -s ${APACHE_CONF}/hadoop/etc/mapred-site.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml -f
-    ln -s ${APACHE_CONF}/hadoop/etc/yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-site.xml -f
+    sudo ln -s ${APACHE_CONF}/hadoop/etc/hadoop-env.sh $HADOOP_HOME/etc/hadoop/hadoop-env.sh -f
+    sudo ln -s ${APACHE_CONF}/hadoop/etc/core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml -f
+    sudo ln -s ${APACHE_CONF}/hadoop/etc/hdfs-site.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml -f
+    sudo ln -s ${APACHE_CONF}/hadoop/etc/mapred-site.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml -f
+    sudo ln -s ${APACHE_CONF}/hadoop/etc/yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-site.xml -f
 
 ### hive-link-conf
-    ln -s ${APACHE_CONF}/hive/etc/hive-config.sh $HIVE_HOME/bin/hive-config.sh -f
-    ln -s ${APACHE_CONF}/hive/etc/hive-site.xml $HIVE_HOME/conf/hive-site.xml -f
-    ln -s ${APACHE_CONF}/hive/etc/hive-schema-3.1.0.derby.sql $HIVE_HOME/scripts/metastore/upgrade/derby/hive-schema-3.1.0.derby.sql -f
+    sudo ln -s ${APACHE_CONF}/hive/etc/hive-config.sh $HIVE_HOME/bin/hive-config.sh -f
+    sudo ln -s ${APACHE_CONF}/hive/etc/hive-site.xml $HIVE_HOME/conf/hive-site.xml -f
+    sudo ln -s ${APACHE_CONF}/hive/etc/hive-schema-3.1.0.derby.sql $HIVE_HOME/scripts/metastore/upgrade/derby/hive-schema-3.1.0.derby.sql -f
 
 ### hadoop-start
     sudo adduser hdoop
@@ -65,6 +65,8 @@
     hdfs dfs -mkdir /tmp
     hdfs dfs -chmod g+w /tmp
     hdfs dfs -ls /
+    ALTER USER 'root'@'%' IDENTIFIED BY 'MySql-2021';
+
 
 ### Create warehouse directory
     hdfs dfs -mkdir -p /user/hive/warehouse

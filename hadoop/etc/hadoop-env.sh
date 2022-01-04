@@ -35,7 +35,11 @@
 # For example:
 #
 #  JAVA_HOME=/usr/java/testing hdfs dfs -ls
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+#export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+# export JAVA_HOME=${JAVA_HOME}
+#export JAVA_HOME=/usr/java/default
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_311
+
 
 # Therefore, the vast majority (BUT NOT ALL!) of these defaults
 # are configured for substitution and not append.  If append
