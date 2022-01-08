@@ -7,38 +7,11 @@
 
 #hdfs
     hdfs dfs -ls /user/hive/warehouse/develop.db/test1
-
-
-
-
-
-<!-- stop -->
-stop-dfs.sh
-stop-yarn.sh
-
 hdfs namenode -format -clusterID CID-7ae77be2-b990-4c66-8ed3-888c497af370
-
-
-<!-- start -->
-start-dfs.sh
-start-yarn.sh
-jps
-
-
-
 
 #beeline
     beeline -u "jdbc:Hive2://127.0.0.1:10000/metastore" -n root -p MySql-2021 -d "org.Apache.Hive.jdbc.HiveDriver"
 
-
-
-#history
-
-1470  projects
- 1471  cd _roo/
- 1472  ./deploy.sh
- 1473  ls
- 1474  hdfs dfs -la /
  1475  hdfs namenode -format
  1476  mkdir  /home/hdoop/tmpdata/dfs/name/current
  1477  mkdir /home/hdoop/tmpdata
@@ -380,25 +353,6 @@ jps
  1814  ./deploy.sh
  1815  hdfs dfs -ls /
  1816  cd /usr/local/
- 1817  ls
- 1818  projects
- 1819  ls
- 1820  cd /app
- 1821  ls
- 1822  hdfs namenode -format
- 1823  jps
- 1824  cd /home/hdoop/
- 1825  ls
- 1826  ls -la
- 1827  cd tmpdata/
- 1828  ls
- 1829  cd dfs/
- 1830  ls
- 1831  cd name/
- 1832  ls
- 1833  cd ..
- 1834  ls
- 1835  jps
  1836  sudo rm -r /app/hadoop/tmp
  1837  hdfs namenode -format
  1838  sudo mkdir -R /usr/local/hadoop_store/hdfs/namenode/current
@@ -428,44 +382,12 @@ jps
  1862  stop-dfs.sh
  1863  rm -rf ./tmp
  1864  hdfs namenode -format
- 1865  start-dfs.sh
- 1866  stop-dfs.sh
- 1867  start-dfs.sh
- 1868  stop-dfs.sh
- 1869  start-dfs.sh
- 1870  jps
  1871  hdfs dfsadmin -report
  1872  sudo service mysql stop
- 1873  service mysql stop
- 1874  service mysql stat
  1875  service mysql start
  1876  sudo service mysql start
- 1877  hdfs dfs -ls /
- 1878  stop-dfs.sh
- 1879  start-dfs.sh
- 1880  stop-yarn.sh
- 1881  exit
- 1882  sshell
- 1883  yarn
- 1884  yarn node
- 1885  yarn node --all
- 1886  yarn node --list
- 1887  yarn namenode
- 1888  start-dfs.sh
- 1889  shell
- 1890  sshell
- 1891  beeline -u \"jdbc:hive2://127.0.0.1:10000/default"
- 1892  beeline -u "jdbc:hive2://127.0.0.1:10000/default"
- 1893  beeline -u "jdbc:hive2://127.0.0.1:10001/default"
- 1894  beeline
- 1895  beeline -u "jdbc:hive2://localhost:10000/default"
- 1896  beeline -u "jdbc:hive2://127.0.0.1:10000/default"
- 1897  beeline -u "jdbc:hive2://127.0.0.1:10000"
- 1898  beeline -u "jdbc:hive2://127.0.0.1:10000/metastore"
  1899  beeline -u "jdbc:hive2://localhost:10000/metastore"
- 1900  beeline
  1901  telnet  Hive-server2  10000
- 1902  telnet  localhost   10000
  1903  telnet  localhost  10000
  1904  netstat -tnlpa | grep 10000
  1905  netstat -tnlpa|grep 10000
@@ -475,97 +397,29 @@ jps
  1909  netstat -tnlpa | grep `cat /var/run/hive/hive-server.pid`
  1910  beeline
  1911  apt list --upgradable
- 1912  ./deploy.sh
- 1913  beeline
- 1914  jps
- 1915  stop-all.sh
- 1916  hadoop namenode --format
- 1917  hadoop namenode -format
- 1918  hive
- 1919  start-all.sh
- 1920  beeline
- 1921  hive
- 1922  beeline -u jdbc:hive2://localhost:10000
- 1923  beeline -u jdbc:hive2://localhost:10001
  1924  lsof -i -P |grep java
- 1925  beeline -u jdbc:hive2://localhost:10000
  1926  beeline -u jdbc:hive2://localhost:10001
  1927  sudo netstat -anop|grep 1000
  1928  sudo netstat -anop|grep 10000
- 1929  hiveserver2
- 1930  stop-all.sh
- 1931  start-all.sh
- 1932  hiveserver2
  1933  hiveserver2 ./bin/beeline! Connect jdbc:Hive2://localhost:10000
  1934  Hive --service hiverserver2 &
  1935  beeline -u "jdbc:Hive2://localhost:10000/default" -n <username> -p <password> -d "org.Apache.Hive.jdbc.HiveDriver"
  1936  beeline -u "jdbc:Hive2://localhost:10000/default" -n root -p MySql-2021 -d "org.Apache.Hive.jdbc.HiveDriver"
  1937  beeline -u "jdbc:Hive2://localhost:10000/default;user=root;password=MySql-2021" --verbose
   1939  beeline -u "jdbc:Hive2://master:10000/default" -n root -p MySql-2021 -d "org.Apache.Hive.jdbc.HiveDriver"
- 1940  hiveserver2
- 1941  start.all.sgh
- 1942  start.all.sh
- 1943  start-all.sh
- 1944  stop-all.sh
- 1945  start-all.sh
- 1946  hive
  1947  netstat -tnlpa|grep 10000
  1948  beeline -u "jdbc:Hive2://127.0.0.1:10000/default" -n root -p MySql-2021 -d "org.Apache.Hive.jdbc.HiveDriver"
  1949  beeline -u "jdbc:Hive2://127.0.0.1:10000/metastore" -n root -p MySql-2021 -d "org.Apache.Hive.jdbc.HiveDriver"
  1950  beeline -u "jdbc:Hive2://127.0.0.1:10000/metastore"
  1951  beeline -u "jdbc:Hive2://master:10000/metastore" -n root -p MySql-2021 -d "org.Apache.Hive.jdbc.HiveDriver"
  1952  beeline -u "jdbc:Hive2://127.0.0.1:10000/metastore" -n root -p MySql-2021 -d "org.Apache.Hive.jdbc.HiveDriver"
- 1953  sshell
- 1954  stop-all.sh
- 1955  start-all.sh
- 1956  telnet localhost 9083
- 1957  telnet localhost 10000
- 1958  history
  1959  beeline -u "jdbc:Hive2://127.0.0.1:10000/metastore" -n root -p MySql-2021 -d "org.Apache.Hive.jdbc.HiveDriver"
  1960  hive --service metastore
- 1961  stop-all.sh
- 1962  stop-dfs.sh
- 1963  stop-yarn.sh
- 1964  start-dfs.sh
- 1965  start-all.sh
  1966  stop-all.sh hdfs namenode -format
- 1967  hdfs namenode -format
- 1968  start-all.sh
- 1969  hdfs namenode -format
- 1970  stop-all.sh
- 1971  hdfs namenode -format
- 1972  start-all.sh
- 1973  hadoop datanode
- 1974  stop-all.sh
- 1975  hadoop datanode
- 1976  stop-all.sh
- 1977  hisoty
- 1978  history
- 1979  history
- 1980  ksa
- 1981  start-all.sh
- 1982  sshell
  1983  hadoop datanode
  1984  hdfs namenode -format
  1985  hdfs namenode -format -clusterID CID-7ae77be2-b990-4c66-8ed3-888c497af370
- 1986  stop-all.sh
- 1987  hdfs namenode -format -clusterID CID-7ae77be2-b990-4c66-8ed3-888c497af370
- 1988  start-all.sh
- 1989  hdfs namenode -format -clusterID CID-7ae77be2-b990-4c66-8ed3-888c497af370
  1990  kubeadm init
  1991  sudo kubeadm init
  1992  sudo kubeadm reset
- 1993  ksa
- 1994  history
- 1995  histor
- 1996  history
- 1997  cat history
- 1998  history
  1999  sudo systemctl restart docker.service
- 2000  history
- 2001  ksa
- 2002  histori
- 2003  history
- 2004  alias
- 2005  alias history="history"
- 2006  history

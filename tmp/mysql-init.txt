@@ -1,26 +1,17 @@
 
+spark.conf.getAll.map(println(_))
+
 mysqld --init-file=${APACHE_CONF}/hive/mysql-init.txt &
 sudo service mysql restart
 
 
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';
-
 pass: MySql-2021
-
 update user set authentication_string=password('marcos') where user='root';
-
-metastore_db
-
-
 :$OPT_PATH/apache-hive-3.1.2-bin/scripts/metastore/upgrade/derby$ vim hive-schema-3.1.0.derby.sql
-
-
 create domain clob as text;
 
 sudo chmod 750 /var/lib/postgresql/12/main
-
-
-
 <property>
     <name>javax.jdo.option.ConnectionURL</name>
     <value>jdbc:postgresql://mypostgresql.testabcd1111.us-west-2.rds.amazonaws.com:5432/mypgdb</value>

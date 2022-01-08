@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export APACHE_CONF=${PROJECTS_ROOT}/apache-config
+
 #fix-win10 -> dos2unix
 find ${APACHE_CONF}/ -type f -name "*.env" -print0 | xargs -0 sudo dos2unix --
 # source enviroment projects
@@ -12,7 +14,6 @@ alias hstop="$HADOOP_INSTALL/sbin/stop-all.sh"
 
 sudo rm -R /tmp/*
 sudo service mysql start
-
 
 #------------------ spark ------------------------------------
 #spark-start
@@ -33,7 +34,3 @@ start-history-server.sh
 start-dfs.sh
 start-yarn.sh
 jps
-
-#exit 134
-# fi
-# export startCluster=true

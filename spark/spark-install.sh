@@ -1,6 +1,10 @@
-
-
 #spark
 curl -O https://archive.apache.org/dist/spark/spark-3.2.0/spark-3.2.0-bin-hadoop3.2.tgz
 tar xvf spark-3.2.0-bin-hadoop3.2.tgz
+
 sudo mv spark-3.2.0-bin-hadoop3.2/ $OPT_PATH/spark 
+
+
+### spark-link-conf
+ln -s ${APACHE_CONF}/spark/etc/spark-defaults.conf $SPARK_HOME/conf/spark-defaults.conf -f
+ln -s ${APACHE_CONF}/hive/etc/hive-site.xml $SPARK_HOME/conf/hive-site.xml -f
