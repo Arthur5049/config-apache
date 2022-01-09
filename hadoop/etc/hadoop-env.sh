@@ -37,7 +37,7 @@
 #  JAVA_HOME=/usr/java/testing hdfs dfs -ls
 #export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export JAVA_HOME=${JAVA_HOME}
-#export JAVA_HOME=/usr/java/default
+# export JAVA_HOME=/usr/java/default
 # export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_311
 
 

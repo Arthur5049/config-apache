@@ -29,9 +29,9 @@ hdfs dfs -chmod g+w /tmp
 hdfs dfs -ls /
 
 ### hive-link-conf
-ln -s ${APACHE_CONF}/hive/etc/hive-config.sh $HIVE_HOME/bin/hive-config.sh -f
-ln -s ${APACHE_CONF}/hive/etc/hive-site.xml $HIVE_HOME/conf/hive-site.xml -f
-ln -s ${APACHE_CONF}/hive/etc/hive-schema-3.1.0.derby.sql $HIVE_HOME/scripts/metastore/upgrade/derby/hive-schema-3.1.0.derby.sql -f
+ln -s -f ${APACHE_CONF}/hive/etc/hive-config.sh $HIVE_HOME/bin/hive-config.sh
+ln -s -f ${APACHE_CONF}/hive/etc/hive-site.xml $HIVE_HOME/conf/hive-site.xml
+ln -s -f ${APACHE_CONF}/hive/etc/hive-schema-3.1.0.derby.sql $HIVE_HOME/scripts/metastore/upgrade/derby/hive-schema-3.1.0.derby.sql
 
 ### fix dw-start
 ls $HIVE_HOME/lib

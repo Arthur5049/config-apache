@@ -7,11 +7,11 @@ chown -R whoami /var/hadoop/tmp/dfs/data
 hadoop datanode
 
 ### hadoop-link-conf
-ln -s ${APACHE_CONF}/hadoop/etc/hadoop-env.sh $HADOOP_HOME/etc/hadoop/hadoop-env.sh -f
-ln -s ${APACHE_CONF}/hadoop/etc/core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml -f
-ln -s ${APACHE_CONF}/hadoop/etc/hdfs-site.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml -f
-ln -s ${APACHE_CONF}/hadoop/etc/mapred-site.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml -f
-ln -s ${APACHE_CONF}/hadoop/etc/yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-site.xml -f
+ln -s -f ${APACHE_CONF}/hadoop/etc/hadoop-env.sh $HADOOP_HOME/etc/hadoop/hadoop-env.sh
+ln -s -f ${APACHE_CONF}/hadoop/etc/core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml
+ln -s -f ${APACHE_CONF}/hadoop/etc/hdfs-site.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml
+ln -s -f ${APACHE_CONF}/hadoop/etc/mapred-site.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml
+ln -s -f ${APACHE_CONF}/hadoop/etc/yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-site.xml
 
 
 ### hadoop-start
