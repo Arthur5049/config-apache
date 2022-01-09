@@ -8,5 +8,5 @@
     ./apache-config.sh
 
 ### Usage
-    ![alt text](https://raw.githubusercontent.com/junqueira/apache-config/master/environ/cluster-spark.png)
+![alt text](https://raw.githubusercontent.com/junqueira/apache-config/master/environ/cluster-spark.png)
 
