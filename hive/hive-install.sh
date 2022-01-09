@@ -38,3 +38,4 @@ ls $HIVE_HOME/lib
 ls $HADOOP_HOME/share/hadoop/hdfs/lib
 rm $HIVE_HOME/lib/guava-19.0.jar
 cp $HADOOP_HOME/share/hadoop/hdfs/lib/guava-27.0-jre.jar $HIVE_HOME/lib/
+cp ${APACHE_CONF}/hive/jars/mysql-connector-java-8.0.17.jar $HIVE_HOME/lib/
