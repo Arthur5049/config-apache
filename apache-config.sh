@@ -13,25 +13,3 @@ alias yyarn="yarn top -queues default"
 alias hstart="$HADOOP_INSTALL/sbin/start-all.sh"
 alias hstop="$HADOOP_INSTALL/sbin/stop-all.sh"
 
-sudo rm -R /tmp/*
-sudo service mysql start
-
-#------------------ spark ------------------------------------
-#spark-start
-# start-all.sh
-# start-master.sh -p ${SPARK_MASTER_PORT}
-alias start-worker="start-worker.sh ${SPARK_MASTER_NAME}:${SPARK_MASTER_PORT}"
-# start-history-server.sh                                                                                        
-
-
-# if [[ -z $startCluster ]]; then
-#     echo "Please inform the source, case loss yarn application -kill _id"
-#     echo " -> startCluster"
-# else
-
-#hadoop-start
-# stop-dfs.sh
-# stop-yarn.sh
-# start-dfs.sh
-# start-yarn.sh
-jps
