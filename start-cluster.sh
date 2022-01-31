@@ -18,3 +18,8 @@ start-history-server.sh
 start-dfs.sh
 start-yarn.sh
 jps
+
+
+#hbase-start
+# hbase-master.sh -p ${SPARK_MASTER_PORT} &
+${HBASE_HOME}/bin/hbase master start &
