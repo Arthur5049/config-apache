@@ -14,7 +14,7 @@ services:
   broker:
     image: confluentinc/cp-server:7.0.0
     hostname: broker
-    container_name: broker
+    container_name: broker  
     depends_on:
       - zookeeper
     ports:
