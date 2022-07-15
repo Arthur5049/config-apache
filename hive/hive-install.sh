@@ -1,7 +1,8 @@
-
 #hive-install
 wget https://downloads.apache.org/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
 tar xzf apache-hive-3.1.2-bin.tar.gz
+
+sudo mv apache-hive-3.1.2-bin/ $OPT_PATH/hive
 
 ### Initiate Derby database
 # $HIVE_HOME/bin/schematool -dbType derby -initSchema --verbose
