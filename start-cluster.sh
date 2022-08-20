@@ -7,10 +7,10 @@ sudo service mysql start
 # else
 
 #spark-start
-start-all.sh
-start-master.sh -p ${SPARK_MASTER_PORT}
-start-worker.sh ${SPARK_MASTER_NAME}:${SPARK_MASTER_PORT}
-start-history-server.sh                                                                             
+${OPT_PATH}/spark/sbin/start-all.sh
+${OPT_PATH}/spark/sbin/start-master.sh -p ${SPARK_MASTER_PORT}
+${OPT_PATH}/spark/sbin/start-worker.sh ${SPARK_MASTER_NAME}:${SPARK_MASTER_PORT}
+${OPT_PATH}/spark/sbin/start-history-server.sh                                                                             
 
 #hadoop-start
 # stop-dfs.sh
@@ -22,4 +22,4 @@ jps
 
 #hbase-start
 # hbase-master.sh -p ${SPARK_MASTER_PORT} &
-${HBASE_HOME}/bin/hbase master start &
+# ${HBASE_HOME}/bin/hbase master start &

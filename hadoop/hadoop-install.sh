@@ -1,10 +1,11 @@
-#hadoop
-wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.3/hadoop-3.3.3.tar.gz
-tar xzf hadoop-3.3.3.tar.gz
-
-sudo mv hadoop-3.3.3/ $OPT_PATH/hadoop
+#hadoop-install
+# wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1-aarch64.tar.gz
+wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1-aarch64.tar.gz
+tar xzf hadoop-3.3.1-aarch64.tar.gz
+sudo mv hadoop-3.3.1/ $OPT_PATH/hadoop
 
 #access
+sudo mkdir -p /var/hadoop/tmp/dfs/data
 chown -R whoami /var/hadoop/tmp/dfs/data
 hadoop datanode
 
