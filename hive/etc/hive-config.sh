@@ -59,12 +59,12 @@ while [ $# -gt 0 ]; do    # Until you run out of parameters . . .
   esac
 done
 
-export HADOOP_HOME=$OPT_PATH/hadoop-3.3.1
+export HADOOP_HOME=$OPT_PATH/hadoop
 
 # Allow alternate conf dir location.
-HIVE_CONF_DIR="${HIVE_CONF_DIR:-$HIVE_HOME/conf}"
-
+# export HIVE_CONF_DIR="${HIVE_CONF_DIR:-$HIVE_HOME/conf}"
 export HIVE_CONF_DIR=$HIVE_CONF_DIR
+
 export HIVE_AUX_JARS_PATH=$HIVE_AUX_JARS_PATH
 
 # Default to use 256MB

@@ -3,19 +3,19 @@ wget https://downloads.apache.org/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
 tar xzf apache-hive-3.1.2-bin.tar.gz
 sudo mv apache-hive-3.1.2-bin/ $OPT_PATH/hive
 
-### Initiate Derby database
-# $HIVE_HOME/bin/schematool -dbType derby -initSchema --verbose
-schematool -initSchema -dbType mysql --verbose
-
 #debian
 sudo service mysql start
 ALTER USER 'root'@'%' IDENTIFIED BY 'MySql-2021';
 #mac
-brew services start mysql
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'MySql-2021';
+# brew services start mysql
+# ALTER USER 'root'@'localhost' IDENTIFIED BY 'MySql-2021';
+
+### Initiate Derby database
+# $HIVE_HOME/bin/schematool -dbType derby -initSchema --verbose
+schematool -initSchema -dbType mysql --verbose
 
 # schematool -dbType derby -info
-hive --service metastore
+hive --service metastore &
 beeline -u jdbc:hive2://localhost:10000
 
 ### Create warehouse directory

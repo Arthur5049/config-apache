@@ -1,5 +1,5 @@
 #hadoop-install
-# wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1-aarch64.tar.gz
+# hadoop-3.3.3 --version
 wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1-aarch64.tar.gz
 tar xzf hadoop-3.3.1-aarch64.tar.gz
 sudo mv hadoop-3.3.1/ $OPT_PATH/hadoop
