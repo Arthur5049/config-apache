@@ -14,8 +14,10 @@ ALTER USER 'root'@'%' IDENTIFIED BY 'MySql-2021';
 # $HIVE_HOME/bin/schematool -dbType derby -initSchema --verbose
 schematool -initSchema -dbType mysql --verbose
 
+
 # schematool -dbType derby -info
-hive --service metastore &
+# hive --service metastore &
+hive --service hiveserver2 &
 beeline -u jdbc:hive2://localhost:10000
 
 ### Create warehouse directory

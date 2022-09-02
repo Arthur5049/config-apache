@@ -4,9 +4,9 @@ wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1-aarch64.ta
 tar xzf hadoop-3.3.1-aarch64.tar.gz
 sudo mv hadoop-3.3.1/ $OPT_PATH/hadoop
 
-#access
+#access  whoami
 sudo mkdir -p /var/hadoop/tmp/dfs/data
-chown -R whoami /var/hadoop/tmp/dfs/data
+sudo chown -R ${USER} /var/hadoop/tmp/dfs/data
 hadoop datanode
 
 ### hadoop-link-conf
