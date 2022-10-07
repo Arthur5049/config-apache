@@ -6,8 +6,7 @@ sudo mv hadoop-3.3.1/ $OPT_PATH/hadoop
 
 #access
 sudo mkdir -p /var/hadoop/tmp/dfs/data
-chown -R whoami /var/hadoop/tmp/dfs/data
-hadoop datanode
+sudo chown -R ${USER} /var/hadoop/tmp/dfs/datahadoop datanode
 
 ### hadoop-link-conf
 ln -s -f ${APACHE_CONF}/hadoop/etc/hadoop-env.sh $HADOOP_HOME/etc/hadoop/hadoop-env.sh
@@ -23,6 +22,8 @@ ln -s -f ${APACHE_CONF}/hadoop/etc/yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-si
 ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 chmod 0600 ~/.ssh/authorized_keys
+
+
 # ssh localhost
 # sudo chmod 777 -R /home/hadoop/tmpdata/dfs/name
 sudo mkdir -p /usr/local/hadoop_store/hdfs/namenode/current
