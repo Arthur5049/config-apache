@@ -34,12 +34,14 @@
     </property>
     <property>
       <!-- <name>hadoop.proxyuser.server.groups</name> -->
-      <name>hadoop.proxyuser.root.groups</name>
+      <!-- <name>hadoop.proxyuser.root.groups</name> -->
+      <name>hadoop.proxyuser.luiz.groups</name>
       <value>*</value>
     </property>
     <property>
       <!-- <name>hadoop.proxyuser.server.hosts</name> -->
-      <name>hadoop.proxyuser.root.hosts</name>
+      <!-- <name>hadoop.proxyuser.root.hosts</name> -->
+      <name>hadoop.proxyuser.luiz.hosts</name>
       <value>*</value>
     </property>
   </configuration>

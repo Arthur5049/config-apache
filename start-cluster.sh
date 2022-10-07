@@ -1,5 +1,6 @@
 # sudo rm -R /tmp/*
 sudo service mysql start
+hive --service hiveserver2 &
 
 # if [[ -z $startCluster ]]; then
 #     echo "Please inform the source, case loss yarn application -kill _id"
